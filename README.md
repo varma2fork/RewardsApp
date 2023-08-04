@@ -25,4 +25,5 @@ Access the h2-console by navigativing to http://localhost:8082/h2-console
 <img width="890" alt="Screenshot 2023-08-03 at 9 47 42 PM" src="https://github.com/varma2fork/RewardsApp/assets/5692079/475be9ad-e183-4331-a25f-3c917a8c6d0c">
 
 
+LinkedIn: https://www.linkedin.com/in/dheerajvk/
 
