@@ -5,17 +5,24 @@ A customer receives 2 points for every dollar spent over $100 in each transactio
 spent over $50 in each transaction
 (e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
 
-Build
+## Build the App
+
 Run mvn clean install to build the project. The build artifacts will be stored in the target directory.
 
-Running unit tests and Integration tests
+## Running unit tests and Integration tests
+
 Run mvn test to run all the test suites.
 
-Running the App
+## Running the App
+
 Run mvn spring-boot:run to start the application.
 
 Access the h2-console by navigativing to http://localhost:8082/h2-console
 
 <img width="1436" alt="Screenshot 2023-08-03 at 9 49 09 PM" src="https://github.com/varma2fork/RewardsApp/assets/5692079/a55d4b8e-ad97-418f-bdeb-2887306ab203">
+
+## Sample Api call
+<img width="890" alt="Screenshot 2023-08-03 at 9 47 42 PM" src="https://github.com/varma2fork/RewardsApp/assets/5692079/475be9ad-e183-4331-a25f-3c917a8c6d0c">
+
 
 
