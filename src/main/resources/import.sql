@@ -1,0 +1,13 @@
+INSERT INTO CUSTOMER(id,name) values (1,'John');
+INSERT INTO CUSTOMER(id,name) values (2,'Doe');
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10001,1,'2023-08-01',9000);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10002,1,'2023-08-02',12002);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10003,1,'2023-07-08',6000);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10004,1,'2023-07-21',7000);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10007,2,'2023-08-22',8000);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10008,2,'2023-08-20',9000);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10009,2,'2023-07-12',7900);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10010,2,'2023-06-11',6109);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10011,2,'2023-05-12',9300);
+INSERT INTO TRANSACTION(id,customer_id,transaction_date,transaction_amount) VALUES (10012,2,'2023-03-10',9800);
+COMMIT;
