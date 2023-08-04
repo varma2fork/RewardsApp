@@ -26,9 +26,7 @@ public class RewardsServiceImpl implements RewardsService {
     TransactionRepository transactionRepository;
 
     /**
-     * Fetches all transactions for given customer and calculates reward points for period of three months from now.
-     *
-     * @param customer
+     * Fetches all transactions for given customer and calculates reward points for period of three months until now.
      * @return Rewards
      */
     @Override

@@ -1,5 +1,6 @@
 package com.retail.rewards.controller;
 
+import com.retail.rewards.Exception.ResourceNotFoundException;
 import com.retail.rewards.entities.Customer;
 import com.retail.rewards.model.Rewards;
 import com.retail.rewards.repositories.CustomerRepository;
@@ -41,18 +42,20 @@ public class RewardsController {
      * @throws Exception
      */
     @GetMapping(value = "/{customerId}/rewards", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Rewards> getRewardsByCustomerId(@PathVariable("customerId") int customerId) throws Exception {
+    public ResponseEntity<Rewards> getRewardsByCustomerId(@PathVariable(value = "customerId", required = true) int customerId) throws ResourceNotFoundException {
+
 
         logger.info("Fetching Customer Information");
         Optional<Customer> customer = customerRepository.findById(customerId);
 
         if (customer.isEmpty()) {
-            throw new Exception("Missing customer");
+            throw new ResourceNotFoundException("Missing customer");
         }
         logger.info("Fetching customer rewards Info");
         Rewards rewards = rewardsService.getRewardsByCustomer(customer.get());
 
         return new ResponseEntity<>(rewards, HttpStatus.OK);
     }
+
 
 }

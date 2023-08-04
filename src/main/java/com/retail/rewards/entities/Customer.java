@@ -15,6 +15,10 @@ public class Customer {
     @Column
     private String name;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
+    private List<Transaction> transactions;
+
     public List<Transaction> getTransactions() {
         return transactions;
     }
@@ -22,10 +26,6 @@ public class Customer {
     public void setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
     }
-
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
-    private List<Transaction> transactions;
 
     public int getId() {
         return id;
@@ -42,6 +42,5 @@ public class Customer {
     public void setName(String name) {
         this.name = name;
     }
-
 
 }
